@@ -75,7 +75,7 @@ const questions = [
     },
     {
         //used for llicense information https://choosealicense.com/
-        type: "list",
+        type: "checkbox",
         message: "Choose a license for your application",
         name: "license",
         choices: ['Apache License 2.0', 'MIT License', "ISC License", 'GNU AGPLv3','GNU GPLv3','GNU LGPLv3', 'Mozilla Public License 2.0',
