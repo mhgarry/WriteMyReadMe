@@ -75,7 +75,7 @@ const questions = [
     },
     {
         //used for llicense information https://choosealicense.com/
-        type: "checkbox",
+        type: "list",
         message: "Choose a license for your application",
         name: "license",
         choices: ['Apache License 2.0', 'MIT License', "ISC License", 'GNU AGPLv3','GNU GPLv3','GNU LGPLv3', 'Mozilla Public License 2.0',
@@ -84,7 +84,7 @@ const questions = [
 ];
 // TODO: Create a function to write README file
 //write the file with filename and data, if there's an error console.log "Please inpnut all data"
-//passes in the arguments filename and data to write a type of file containing data
+//when parameters are passed into the arguments filename and data it will create our file
  function writeToFile (fileName, data) {
     fs.writeFile(fileName, data, (error) => {
         if (error) {
@@ -98,9 +98,8 @@ const questions = [
 // TODO: Create a function to initialize app
 //runs inquirer and prompts the questions to user
 //passes the userdata into function and console.logs our userdata 
-//calls our writeToFile function back to write the file with the arugments "README.md" to generate the file
-//calls the generatemarkdown function as an argument and passes it into the writeToFile function 
-//we pass userdata from our objects array into our generateMarkdown function so we can write the file
+//calls our writeToFile function to pass in "README.md" into our filename argument and our function generateMarkdown with the parameter userData into our data argument 
+//the writeToFile function runs running our fs.writeFile function built into inquirer to write our file
 function init() {
     inquirer.prompt(questions).then
     (function (userData) {
@@ -110,5 +109,5 @@ function init() {
 };
 
 
-//Function call to initialize app
+//Function call to initialize app the intialize funciton and run all of our funcitons 
 init();

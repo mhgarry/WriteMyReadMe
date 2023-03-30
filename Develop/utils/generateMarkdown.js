@@ -1,37 +1,36 @@
 // // TODO: Create a function that returns a license badge based on which license is passed in
 // // If there is no license, return an empty string
 //checks for license value being used and gives it a badge
-function renderLicenseBadge(data) {
-  const licenseType = data.license[0];
-  let licenseString = " "
-    if (licenseType === 'Apache License 2.0') { 
-      licenseString = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
-      };
-      if (licenseType === "MIT License") {
-      licenseString = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-     };
-      if (licenseType === "ISC License0") {
-       licenseString = `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`
-    }; 
-    if (licenseType === "GNU AGPLv3") {
-      licenseString = `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`
-    };
-    if (licenseType === "GNU GPLv3") {
-      licenseString = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
-    };
-    if (licenseType === "GNU LGPLv3") {
-      licenseString = `[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)`
-    };
-     if (licenseType === "Mozilla Public License 2.0" ) {
-      licenseString = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
-    }; 
-     if (licenseType === "The Unlicense") {
-      licenseString = `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
-    };
-     if (licenseType === "Boost Software License 1.0") {
-      licenseString = `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
+function licenseBadge (value) {
+  let badge = " "
+    if (value === 'Apache License 2.0') { 
+      badge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+      }
+      else if (value === "MIT License") {
+      badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+     }
+      else if (value === "ISC License0") {
+       badge = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)"
+    }
+    else if (value === "GNU AGPLv3") {
+      badge =  "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)"
+    }
+    else if (value === "GNU GPLv3") {
+      badge =  "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+    }
+    else if (value === "GNU LGPLv3") {
+      badge =  "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)"
+    }
+     else if (value === "Mozilla Public License 2.0" ) {
+      badge =  "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+    }
+     else if (value === "The Unlicense") {
+      badge =  "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
+    }
+     else if (value === "Boost Software License 1.0") {
+      badge =  "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
     } 
-    return licenseString
+    return badge
   };
 
 
@@ -74,6 +73,9 @@ function generateMarkdown(data) {
   -${data.motivation}
   -${data.problems}
 
+  ## License
+  -${licenseBadge.license}
+
   ## Installation
   -${data.installation}
 
@@ -93,14 +95,13 @@ function generateMarkdown(data) {
   -${data.tests}
  
   ## How to Contribute 
-  -${data.contributing}
+  -${data.contribute}
 
-  ## Questions for Developer
+  ## Questions
    - ${data.email}
    - ${data.github}
   
-   ## License
-  -${data.renderLicenseBadge}
+  
  
 `;
 }
