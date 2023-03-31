@@ -53,7 +53,7 @@ function generateMarkdown(data) {
   2. [Description](#description)
   3. [Installation](#installation)
   4. [Usage](#usage)
-  5. [Screenshots](#screenshots)
+  5. [Required Packages](#packages)
   6. [Features](#features)
   7. [Resources](#resources)
   8. [Tests](#tests)
@@ -80,9 +80,9 @@ function generateMarkdown(data) {
 
     > ${data.usage}
 
-## Screenshots 
+## Required Packages  <a name="packages"></a>
 
-    [!image](/Assets/images/generator_function.png)${data.screenshots}
+    >${data.packages}
 
 ## Features <a name="features"></a>
   

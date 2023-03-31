@@ -52,7 +52,7 @@ const questions = [
     },
     {
         type: "input",
-        name: "required packages",
+        name: "packages",
         message: "What packages are required if any to run this applicaiton?"
     },
     {  
