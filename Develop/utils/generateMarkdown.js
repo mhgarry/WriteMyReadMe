@@ -82,7 +82,7 @@ function generateMarkdown(data) {
 
 ## Screenshots 
 
-    [!image]${data.screenshots}
+    [!image](/Assets/images/generator_function.png)${data.screenshots}
 
 ## Features <a name="features"></a>
   

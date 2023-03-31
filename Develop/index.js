@@ -52,8 +52,8 @@ const questions = [
     },
     {
         type: "input",
-        name: "screenshots",
-        message: "Copy file path to share screenshots"
+        name: "required packages",
+        message: "What packages are required if any to run this applicaiton?"
     },
     {  
         type: "input",
