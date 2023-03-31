@@ -49,7 +49,7 @@ function generateMarkdown(data) {
 
 # ${data.title} 
 
-#Table of contents,
+# Table of contents,
   1. [License](#license)
   2. [Description](#description)
   3. [Installation](#installation)
@@ -63,8 +63,8 @@ function generateMarkdown(data) {
   
 ## Licensing <a name="license"></a>
 
-  >Refer to https://choosealicense.com/ for licensing information
-  >${licenseBadge(data.license)}
+  Refer to https://choosealicense.com/ for licensing information
+  ${licenseBadge(data.license)}
 
 ## Description <a name="description"></a>
   
@@ -81,9 +81,9 @@ function generateMarkdown(data) {
 
     ${data.usage}
 
-## Screenshots 
+## Packages <a name="packages"></a> 
 
-    >${data.packages}
+    ${data.packages}
 
 ## Features <a name="features"></a>
   
