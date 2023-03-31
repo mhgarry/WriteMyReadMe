@@ -1,7 +1,7 @@
 {
   "name": "make_your_readme",
   "version": "1.0.0",
-  "description": "",
+  "description": "- [WriteMyReadMe](#writemyreadme)\r - [Table of contents,](#table-of-contents)\r   - [Licensing ](#licensing-)\r   - [Description ](#description-)\r   - [Installation ](#installation-)\r   - [Usage ](#usage-)\r   - [Packages ](#packages-)\r   - [Features ](#features-)\r   - [Resources ](#resources-)\r   - [Tests ](#tests-)\r   - [How to Contribute ](#how-to-contribute-)\r   - [Questions ](#questions-)\r   - [Video Demonstration](#video-demonstration)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -45,11 +45,10 @@ renderLicenseSection()
 //we use the name property from our inquirer object array to pass the data to write into 
 //our function 
 function generateMarkdown(data) {
-  return `
-
-# ${data.title} 
+  return `# ${data.title} 
 
 # Table of contents,
+
   1. [License](#license)
   2. [Description](#description)
   3. [Installation](#installation)

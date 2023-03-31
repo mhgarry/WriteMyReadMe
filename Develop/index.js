@@ -7,7 +7,7 @@ const generateMarkdown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 const questions = [
     {   
-        type: "title",
+        type: "input",
         name: "title",
         message: "Enter your application title here"
         
