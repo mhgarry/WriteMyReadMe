@@ -46,19 +46,22 @@ renderLicenseSection()
 //our function 
 function generateMarkdown(data) {
   return `
+
 # ${data.title} 
 
-#Table of contents,
-  1. [License](#license)
-  2. [Description](#description)
-  3. [Installation](#installation)
-  4. [Usage](#usage)
-  5. [Required Packages](#packages)
-  6. [Features](#features)
-  7. [Resources](#resources)
-  8. [Tests](#tests)
-  9. [How to contribute](#contribute)
-  10. [Questions](#questions)
+# Table of contents
+- [${data.title}](#datatitle)
+- [Table of contents](#table-of-contents)
+  - [Licensing ](#licensing-)
+  - [Description ](#description-)
+  - [Installation ](#installation-)
+  - [Usage ](#usage-)
+  - [Required Packages  ](#required-packages--)
+  - [Features ](#features-)
+  - [Resources ](#resources-)
+  - [Tests ](#tests-)
+  - [How to Contribute ](#how-to-contribute-)
+  - [Questions ](#questions-)
   
 ## Licensing <a name="license"></a>
 
@@ -67,44 +70,43 @@ function generateMarkdown(data) {
 
 ## Description <a name="description"></a>
   
-    > Application description: ${data.description}
-    > I built this app ${data.motivation}
-    > This app ${data.problems}
+    1. Application description: ${data.description}
+    2. I built this app ${data.motivation}
+    3. This app ${data.problems}
 
 ## Installation <a name="Installation"></a>
   
-    > ${data.installation}
-    > Refer to https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository for information on cloning a repository
+    ${data.installation}
+     Refer to https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository for information on cloning a repository
 
 ## Usage <a name="usage"></a>
 
-    > ${data.usage}
+    ${data.usage}
 
 ## Required Packages  <a name="packages"></a>
 
-    >${data.packages}
+    ${data.packages}
 
 ## Features <a name="features"></a>
   
-  > ${data.features}
+   ${data.features}
   
 ## Resources <a name="resources"></a>
   
-  > ${data.resources}
+   ${data.resources}
   
 ## Tests <a name="tests"></a>
 
-  > ${data.tests}
+   ${data.tests}
 
 ## How to Contribute <a name="contribute"></a>
   
-  > ${data.contribute}
+  ${data.contribute}
 
 ## Questions <a name="questions"></a>
   
-  > For any further questions I'm avaialble at ${data.email}
-  > To view and clone this project's repository as well as view other projects I'm working on visit ${data.github}
-`;
+  For any further questions I'm avaialble at ${data.email}
+  To view and clone this project's repository as well as view other projects I'm working on visit ${data.github}`;
 }
 
 module.exports = generateMarkdown;
