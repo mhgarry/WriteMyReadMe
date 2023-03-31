@@ -45,65 +45,70 @@ renderLicenseSection()
 //we use the name property from our inquirer object array to pass the data to write into 
 //our function 
 function generateMarkdown(data) {
-  return `# ${data.title} 
+ return `# ${data.title}
 
-# Table of contents,
+## Table of contents
 
-  1. [License](#license)
+  1. [Licenssing](#licensing)
   2. [Description](#description)
   3. [Installation](#installation)
   4. [Usage](#usage)
-  5. [Required Packages](#packages)
+  5. [Packages](#packages)
   6. [Features](#features)
   7. [Resources](#resources)
   8. [Tests](#tests)
-  9. [How to contribute](#contribute)
+  9. [How to contribute](#how-to-contribute)
   10. [Questions](#questions)
-  
-## Licensing <a name="license"></a>
+  11. [Video Demonstration](#video-demonstration)
 
-  Refer to https://choosealicense.com/ for licensing information
+## Licensing
+
+  Refer to <https://choosealicense.com/> for licensing information
   ${licenseBadge(data.license)}
 
-## Description <a name="description"></a>
+## Description
   
     1. Application description: ${data.description}
     2. I built this app ${data.motivation}
     3. This app ${data.problems}
 
-## Installation <a name="Installation"></a>
+## Installation
   
     ${data.installation}
      Refer to https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository for information on cloning a repository
 
-## Usage <a name="usage"></a>
+## Usage
 
     ${data.usage}
 
-## Packages <a name="packages"></a> 
+## Packages
 
     ${data.packages}
 
-## Features <a name="features"></a>
+## Features
   
    ${data.features}
   
-## Resources <a name="resources"></a>
+## Resources
   
    ${data.resources}
   
-## Tests <a name="tests"></a>
+## Tests
 
    ${data.tests}
 
-## How to Contribute <a name="contribute"></a>
+## How to Contribute
   
   ${data.contribute}
 
-## Questions <a name="questions"></a>
+## Questions
   
   For any further questions I'm avaialble at ${data.email}
-  To view and clone this project's repository as well as view other projects I'm working on visit ${data.github}`;
+  To view and clone this project's repository as well as view other projects I'm working on visit ${data.github}
+
+## Video Demonstration
+`;
+
 }
 
 module.exports = generateMarkdown;
