@@ -7,10 +7,18 @@ const generateMarkdown = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 const questions = [
     {   
-        type: "input",
+        type: "title",
         name: "title",
         message: "Enter your application title here"
         
+    },
+    {
+        //used for llicense information https://choosealicense.com/
+        type: "list",
+        message: "Choose a license for your application",
+        name: "license",
+        choices: ['Apache License 2.0', 'MIT License', "ISC License", 'GNU AGPLv3','GNU GPLv3','GNU LGPLv3', 'Mozilla Public License 2.0',
+                'The Unlicense', 'Boost Software License 1.0']
     },
     {
         type: "input",
@@ -40,23 +48,23 @@ const questions = [
     {
         type: "input",
         name: "features",
-        message: "What featuers does your application include?"
+        message: "What features does your application include?"
     },
     {
         type: "input",
-        name: "screenshot",
-        message: "Add a screenshot using ![alt text](assets/images/screenshot.png)"
+        name: "screenshots",
+        message: "Copy file path to share screenshots"
     },
     {  
         type: "input",
-        name: "credit",
-        message: "Enter any contributers and sources you used while building your project"
+        name: "resources",
+        message: "What resources did you use to build this application?"
 
     },
     {
         type: "input",
         name: "tests",
-        message: "How can a user test your project"
+        message: "How can a user test your applicaiton?"
     },
     {
         type: "input",
@@ -66,21 +74,12 @@ const questions = [
     {
         type: "input",
         name: "email",
-        message: "what is your email in case the user has questions?"
+        message: "what is your email in case the user has questions?",
     },
-    {
-        type: "input",
-        name: "github",
-        message: "What is your github in case the user has questions"
+    {   type: "input", 
+        message: "What is your github account link?",
+        name: "github"
     },
-    {
-        //used for llicense information https://choosealicense.com/
-        type: "list",
-        message: "Choose a license for your application",
-        name: "license",
-        choices: ['Apache License 2.0', 'MIT License', "ISC License", 'GNU AGPLv3','GNU GPLv3','GNU LGPLv3', 'Mozilla Public License 2.0',
-                'The Unlicense', 'Boost Software License 1.0']
-    }
 ];
 // TODO: Create a function to write README file
 //write the file with filename and data, if there's an error console.log "Please inpnut all data"

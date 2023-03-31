@@ -1,6 +1,6 @@
 // // TODO: Create a function that returns a license badge based on which license is passed in
 // // If there is no license, return an empty string
-//checks for license value being used and gives it a badge
+//checks for license value being used and returns its a badge and license link
 function licenseBadge (license) {
       if (license === 'Apache License 2.0') { 
       return "[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
@@ -33,75 +33,77 @@ function licenseBadge (license) {
   };
 
 
-// // // TODO: Create a function that returns the license link
-// // // If there is no license, return an empty string
-// function renderLicenseLink(license) {
-//   //https://choosealicense.com/
-// }
 
-// // // TODO: Create a function that returns the license section of README
-// // // If there is no license, return an empty string
-// function renderLicenseSection(license) {
-
-// }
-
+// // TODO: Create a function that returns the license section of README
+// // If there is no license, return an empty string
+function renderLicenseSection(data) {
+    return licenseBadge()
+}
+renderLicenseSection()
 // // TODO: Create a function to generate markdown for README
 //passes in the data from our prompts and we use template literals to write our README 
 //we use the name property from our inquirer object array to pass the data to write into 
 //our function 
 function generateMarkdown(data) {
   return `
-  # ${data.title} 
+# ${data.title} 
 
-  ## Table of Contents 
-
-  - [Description](#description)
-  - [License] (#license)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Features](#features)
-  - [Screenshot](#screenshot)
-  - [Credit](#credit)
-  - [Tests](#tests)
-  - [How to Contribute](#how-to-contribute)
-  - [Questions] (#questions)
+#Table of contents,
+  1. [License](#license)
+  2. [Description](#description)
+  3. [Installation](#installation)
+  4. [Usage](#usage)
+  5. [Screenshots](#screenshots)
+  6. [Features](#features)
+  7. [Resources](#resources)
+  8. [Tests](#tests)
+  9. [How to contribute](#contribute)
+  10. [Questions](#questions)
   
+## Licensing <a name="license"></a>
 
-  ## Description 
-  -${data.description}
-  -${data.motivation}
-  -${data.problems}
+  >Refer to https://choosealicense.com/ for licensing information
+  >${licenseBadge(data.license)}
 
-  ## License
-  -${licenseBadge(data.license)}
-
-  ## Installation
-  -${data.installation}
-
-  ## Usage
-  -${data.usage}
-
-  ## Features
-  -${data.features}
+## Description <a name="description"></a>
   
-  ## Screenshot
-  -${data.screenshot}
-  
-  ## Credit
-  -${data.credit}
-  
-  ## Tests
-  -${data.tests}
- 
-  ## How to Contribute 
-  -${data.contribute}
+    > Application description: ${data.description}
+    > I built this app ${data.motivation}
+    > This app ${data.problems}
 
-  ## Questions
-   - ${data.email}
-   - ${data.github}
+## Installation <a name="Installation"></a>
   
+    > ${data.installation}
+    > Refer to https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository for information on cloning a repository
+
+## Usage <a name="usage"></a>
+
+    > ${data.usage}
+
+## Screenshots 
+
+    [!image]${data.screenshots}
+
+## Features <a name="features"></a>
   
- 
+  > ${data.features}
+  
+## Resources <a name="resources"></a>
+  
+  > ${data.resources}
+  
+## Tests <a name="tests"></a>
+
+  > ${data.tests}
+
+## How to Contribute <a name="contribute"></a>
+  
+  > ${data.contribute}
+
+## Questions <a name="questions"></a>
+  
+  > For any further questions I'm avaialble at ${data.email}
+  > To view and clone this project's repository as well as view other projects I'm working on visit ${data.github}
 `;
 }
 
