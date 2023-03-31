@@ -49,19 +49,17 @@ function generateMarkdown(data) {
 
 # ${data.title} 
 
-# Table of contents
-- [${data.title}](#datatitle)
-- [Table of contents](#table-of-contents)
-  - [Licensing ](#licensing-)
-  - [Description ](#description-)
-  - [Installation ](#installation-)
-  - [Usage ](#usage-)
-  - [Required Packages  ](#required-packages--)
-  - [Features ](#features-)
-  - [Resources ](#resources-)
-  - [Tests ](#tests-)
-  - [How to Contribute ](#how-to-contribute-)
-  - [Questions ](#questions-)
+#Table of contents,
+  1. [License](#license)
+  2. [Description](#description)
+  3. [Installation](#installation)
+  4. [Usage](#usage)
+  5. [Required Packages](#packages)
+  6. [Features](#features)
+  7. [Resources](#resources)
+  8. [Tests](#tests)
+  9. [How to contribute](#contribute)
+  10. [Questions](#questions)
   
 ## Licensing <a name="license"></a>
 
@@ -83,9 +81,9 @@ function generateMarkdown(data) {
 
     ${data.usage}
 
-## Required Packages  <a name="packages"></a>
+## Screenshots 
 
-    ${data.packages}
+    >${data.packages}
 
 ## Features <a name="features"></a>
   
