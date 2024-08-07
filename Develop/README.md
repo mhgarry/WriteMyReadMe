@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-  1. [Licenssing](#licensing)
+  1. [Licensing](#licensing)
   2. [Description](#description)
   3. [Installation](#installation)
   4. [Usage](#usage)
