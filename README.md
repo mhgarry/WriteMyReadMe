@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-- [WriteMyReadMe](#writemyreadme)
+  - [WriteMyReadMe](#writemyreadme)
   - [Table of contents](#table-of-contents)
   - [Licensing](#licensing)
   - [Description](#description)
