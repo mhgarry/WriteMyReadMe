@@ -1,0 +1,32 @@
+{
+  "name": "write-my-readme",
+  "version": "1.1.0",
+  "description": "A CLI program to generate a tempalted README file for develoers projects faster without worry about anything but responding to the pre-selected questions.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhgarry/WriteMyReadme.git"
+  },
+  "keywords": [
+    "cli",
+    "node",
+    "readme-generator",
+    "devtools"
+  ],
+  "author": "Matthew Garry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhgarry/WriteMyReadme/issues"
+  },
+  "homepage": "https://github.com/mhgarry/WriteMyReadme#readme",
+  "devDependencies": {
+    "@tsconfig/node-lts": "^22.0.1",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3"
+  }
+}

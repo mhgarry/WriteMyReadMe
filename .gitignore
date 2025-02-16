@@ -1,4 +1,9 @@
-node_modules
-package-lock.json
-.vscode
-.DS_Store
+**/node_modules
+**/dist
+**/coverage
+**/build
+**/.env
+**/.env.*
+**/.DS_Store
+**/.vscode
+**/.history
